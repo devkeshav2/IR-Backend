@@ -1,5 +1,6 @@
 package com.indian.railway.service.impl;
 
+import com.indian.railway.dto.DropDown;
 import com.indian.railway.entity.Station;
 import com.indian.railway.repository.StationRepository;
 import com.indian.railway.service.StationService;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -102,5 +104,18 @@ public class StationServiceImpl implements StationService {
         List<Station> found = stationRepository.findByStateIgnoreCase(state);
         log.debug("Stations found in state '{}': {}", state, found.size());
         return found;
+    }
+
+
+
+    @Override
+    public List<DropDown> getAllStationsInDropDown(String stationCodeOrName) {
+        List<Station> stations = stationRepository.searchStationByCodeOrName(stationCodeOrName);
+        return stations.stream()
+                .map(station -> new DropDown(
+                        station.getStationId(),
+                        station.getStationName()
+                ))
+                .toList();
     }
 }

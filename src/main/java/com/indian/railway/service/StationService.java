@@ -1,5 +1,6 @@
 package com.indian.railway.service;
 
+import com.indian.railway.dto.DropDown;
 import com.indian.railway.entity.Station;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface StationService {
     List<Station> searchStationsByName(String name);
 
     List<Station> searchStationsByState(String state);
+
+    List<DropDown> getAllStationsInDropDown(String stationCodeOrName);
 }

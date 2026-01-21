@@ -2,6 +2,8 @@ package com.indian.railway.repository;
 
 import com.indian.railway.entity.Station;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -23,4 +25,14 @@ public interface StationRepository extends JpaRepository<Station, Long> {
 
     // Optional: check if station exists by code
     boolean existsByStationCode(String stationCode);
+
+    @Query("""
+    SELECT s
+    FROM Station s
+    WHERE LOWER(s.stationCode) LIKE LOWER(CONCAT('%', :search, '%'))
+       OR LOWER(s.stationName) LIKE LOWER(CONCAT('%', :search, '%'))
+""")
+    List<Station> searchStationByCodeOrName(@Param("search") String search);
+
+
 }

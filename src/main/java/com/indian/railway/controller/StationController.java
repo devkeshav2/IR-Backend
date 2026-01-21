@@ -1,6 +1,7 @@
 package com.indian.railway.controller;
 
 import com.indian.railway.common.GenericResponse;
+import com.indian.railway.dto.DropDown;
 import com.indian.railway.entity.Station;
 import com.indian.railway.service.StationService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +16,7 @@ import static com.indian.railway.common.IRConstants.*;
 
 @Slf4j
 @RestController
+@CrossOrigin("*")
 @RequestMapping(STATION_BASE_URL)
 public class StationController {
 
@@ -161,5 +163,20 @@ public class StationController {
         }
 
         return new ResponseEntity<>(response, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("/search/stations")
+    public ResponseEntity<GenericResponse<List<DropDown>>> getAllStationsListOnSearch(@RequestParam String stationCodeOrName) {
+        log.info("Get all stations in dropdown for param : {} ",stationCodeOrName);
+        List<DropDown> stations = stationService.getAllStationsInDropDown(stationCodeOrName);
+
+        GenericResponse<List<DropDown>> response = new GenericResponse<>();
+        response.setMessage(STATION_FETCHED_SUCCESSFULLY);
+        response.setResult(stations);
+        response.setCount(stations.size());
+        response.setStatus(HttpStatus.OK.value());
+
+        log.info("Total stations: {}", stations.size());
+        return ResponseEntity.ok(response);
     }
 }

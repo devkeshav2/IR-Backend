@@ -1,0 +1,220 @@
+Here’s a curated list of **100 Tree-related DSA questions**, organized by topic and difficulty—from basic to advanced. This covers **binary trees**, **binary search trees (BST)**, **tree traversals**, **recursion**, **depth-first/breadth-first search**, **balanced trees**, and **miscellaneous** problems involving **Trie**, **Segment Tree**, **AVL Tree**, and more.
+
+---
+
+## 🌱 **Basic Binary Tree (Easy)**
+
+1. Create a binary tree
+
+2. Inorder traversal (recursive)
+
+3. Preorder traversal (recursive)
+
+4. Postorder traversal (recursive)
+
+5. Inorder traversal (iterative)
+
+6. Preorder traversal (iterative)
+
+7. Postorder traversal (iterative)
+
+8. Level order traversal (BFS)
+
+9. Height of a binary tree
+
+10. Count number of nodes
+
+11. Count leaf nodes
+
+12. Count non-leaf nodes
+
+13. Sum of all nodes
+
+14. Sum of leaf nodes
+
+15. Maximum element in tree
+
+16. Minimum element in tree
+
+17. Mirror a binary tree
+
+18. Check if two trees are identical
+
+19. Print all root-to-leaf paths
+
+20. Diameter of a binary tree
+
+---
+
+## 🧠 **Binary Tree – Intermediate**
+
+21. Check if tree is balanced (height-balanced)
+
+22. Convert binary tree to its mirror
+
+23. Find lowest common ancestor (LCA)
+
+24. Print level with max sum
+
+25. Check if tree is symmetric
+
+26. Right view of binary tree
+
+27. Left view of binary tree
+
+28. Zigzag level order traversal
+
+29. Boundary traversal
+
+30. Vertical order traversal
+
+31. Top view of binary tree
+
+32. Bottom view of binary tree
+
+33. Print ancestors of a node
+
+34. Distance between two nodes
+
+35. Sum of nodes at k-th level
+
+36. Deepest node in a tree
+
+37. Check if tree is subtree of another
+
+38. Construct tree from inorder and preorder
+
+39. Construct tree from inorder and postorder
+
+40. Serialize and deserialize a binary tree
+
+---
+
+## 🌳 **Binary Search Tree (BST)**
+
+41. Create a BST
+
+42. Search in a BST
+
+43. Insert in a BST
+
+44. Delete a node from BST
+
+45. Find minimum in BST
+
+46. Find maximum in BST
+
+47. Check if a binary tree is BST
+
+48. Find inorder successor in BST
+
+49. Find inorder predecessor in BST
+
+50. Lowest common ancestor in BST
+
+51. Floor and Ceil in BST
+
+52. Kth smallest element in BST
+
+53. Kth largest element in BST
+
+54. Convert BST to doubly linked list
+
+55. Convert BST to Min Heap
+
+56. Merge two BSTs
+
+57. Find closest value in BST
+
+58. Range sum in BST
+
+59. Validate preorder traversal of BST
+
+60. Check if two BSTs are identical
+
+---
+
+## 🧩 **Advanced Tree Problems**
+
+61. Morris Inorder Traversal (O(1) space)
+
+62. Flatten binary tree to linked list (in-place)
+
+63. Path sum in binary tree
+
+64. Count paths with a given sum
+
+65. Maximum path sum in binary tree
+
+66. Find duplicate subtrees
+
+67. Print nodes at distance K from a target
+
+68. Burn a binary tree from a node
+
+69. Diameter in terms of nodes
+
+70. Tree to Sum Tree
+
+71. Convert binary tree to DLL
+
+72. Count nodes in complete binary tree
+
+73. Recover BST where two nodes are swapped
+
+74. Binary tree cameras (minimum cameras to monitor all nodes)
+
+75. Count good nodes in binary tree
+
+76. Tree from string with brackets
+
+77. Evaluate expression tree
+
+78. Construct tree from parent array
+
+79. Convert binary tree to children-sum tree
+
+80. Print all nodes at distance K in binary tree
+
+---
+
+## 🧬 **Trie / Prefix Tree**
+
+81. Implement Trie (Insert/Search)
+82. Auto-complete feature using Trie
+83. Delete word from Trie
+84. Word search in a grid using Trie
+85. Count words with given prefix
+86. Longest word with all prefixes present
+87. Maximum XOR of two numbers using Trie
+88. Implement prefix sum in Trie
+89. Replace words using dictionary Trie
+90. Check if word can be formed by concatenating two dictionary words
+
+---
+
+## ⚙️ **Segment Tree / Advanced DS**
+
+91. Build a segment tree
+92. Range minimum query
+93. Range sum query
+94. Range update using lazy propagation
+95. Count of a number in given range
+96. Point update in segment tree
+97. Find kth smallest in a range
+98. Persistent segment tree
+99. Segment tree with max and min
+100. Difference array using segment tree
+
+---
+
+## ✅ Want to go deeper?
+
+Let me know if you'd like:
+
+* Java solutions (batch-wise with explanations)
+* Categorized in a PDF or spreadsheet
+* Focus on only **Binary Tree**, **BST**, **Trie**, or **Segment Tree** problems
+* Tree visualization help for understanding traversal or recursion
+
+Just tell me your preference and I’ll prepare the next batch accordingly!

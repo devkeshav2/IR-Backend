@@ -1,0 +1,193 @@
+Here's a curated list of **100 Logical DSA Questions** to strengthen your **problem-solving, reasoning, and logic-building skills**, including patterns like number theory, puzzles, combinatorics, pattern recognition, string manipulations, array logic, recursion, and bit manipulation.
+
+These questions are **language-independent** (but you can implement them in Java) and ideal for coding rounds and interviews.
+
+---
+
+## 🔰 **Basic Logic Building (Beginner)**
+
+1. Swap two numbers without using third variable
+
+2. Check if a number is palindrome
+
+3. Reverse a number
+
+4. Find factorial of a number
+
+5. Find GCD and LCM--
+
+6. Count digits in a number
+
+7. Find sum of digits
+
+8. Print Fibonacci series
+
+9. Check if a number is Armstrong
+
+10. Check if a number is prime
+
+11. Generate all prime numbers up to N
+
+12. Print multiplication table
+
+13. Sum of first N natural numbers
+
+14. Find nth Fibonacci number
+
+15. Convert decimal to binary
+
+16. Convert binary to decimal
+
+17. Find largest of three numbers
+
+18. Print factors of a number
+
+19. Count number of set bits in binary
+
+20. Check if number is perfect square
+
+---
+
+## 🔢 **Number-Based Logic**
+
+21. Print all palindrome numbers in a range
+
+22. Check if number is perfect number
+
+23. Check for strong number
+
+24. Check for spy number
+
+25. Check if number is automorphic
+
+26. Print number in words (123 → one two three)
+
+27. Check for neon number
+
+28. Find magic number
+
+29. Sum of even and odd digits separately
+
+30. Sum of squares of digits
+
+31. Count trailing zeros in factorial
+
+32. Find power without using Math.pow
+
+33. Count frequency of digits in a number
+
+34. Rotate digits of a number
+
+35. Check if number is Harshad
+
+36. Check if number is Duck number
+
+37. Convert number to Roman numeral
+
+38. Convert Roman to number
+
+39. Multiply two numbers using recursion
+
+40. Divide two numbers using subtraction
+
+---
+
+## 🧠 **Bit Manipulation & Logical Puzzles**
+
+41. Find number that appears once when others appear twice
+42. Find missing number in 1 to N
+43. Check if number is power of 2
+44. Add two binary numbers (as strings)
+45. Toggle ith bit of number
+46. Swap even and odd bits
+47. Find position of rightmost set bit
+48. Set kth bit of number
+49. Clear kth bit of number
+50. Count number of bits to change A to B
+
+---
+
+## 🔄 **Pattern Printing (Logic + Loops)**
+
+51. Print pyramid pattern
+52. Print Floyd’s triangle
+53. Pascal’s triangle
+54. Diamond star pattern
+55. Number pyramid
+56. Butterfly pattern
+57. Hollow square pattern
+58. Zigzag pattern
+59. Right-angled triangle of alphabets
+60. Sandglass star pattern
+
+---
+
+## 🔁 **String Logic Questions**
+
+61. Check if a string is palindrome
+62. Count vowels and consonants
+63. Reverse a string
+64. Remove duplicate characters
+65. Find the most frequent character
+66. Convert string to uppercase without using library
+67. Check for anagram
+68. Find first non-repeating character
+69. Count number of words
+70. Check if string is isogram
+
+---
+
+## 🔄 **Array & Matrix-Based Logical Problems**
+
+71. Find pair with given sum
+72. Find duplicates in array
+73. Rearrange array such that positive and negative alternate
+74. Find second largest element
+75. Rotate array by k elements
+76. Find majority element
+77. Move all zeros to end
+78. Find intersection of two arrays
+79. Check for subarray with 0 sum
+80. Transpose a matrix
+
+---
+
+## 🧩 **Logic Puzzles / Reasoning-Based**
+
+81. 3 jugs, 2-liter problem (Water Jug problem)
+82. Classic farmer-cabbage-goat-wolf problem
+83. Josephus problem
+84. N-Queens problem
+85. Sudoku validator
+86. Knight’s tour problem
+87. Find celebrity in party (everyone knows them)
+88. Egg drop puzzle (min attempts to break)
+89. Tower of Hanoi
+90. Find outlier in a sequence (e.g., even among odds)
+
+---
+
+## 🧮 **Combinatorics & Mathematical Logic**
+
+91. Count ways to climb stairs
+92. Number of trailing zeroes in factorial
+93. Check if two lines intersect
+94. Find number of digits in n!
+95. Find nth Catalan number
+96. Count derangements
+97. Number of paths in m x n grid
+98. Count all subsequences
+99. Count of binary strings with no consecutive 1s
+100. Find power of a number using divide & conquer
+
+---
+
+## ✅ Ready for Next Step?
+
+Would you like:
+
+* Java solutions for any/all of these?
+* These grouped into a **PDF or Excel Sheet**?
+* Sorted by topic (bit manipulation, math, patterns, puzzles, etc.)?
+
+Just say “Start with first 10 solutions in Java” or tell me how you’d like to proceed!

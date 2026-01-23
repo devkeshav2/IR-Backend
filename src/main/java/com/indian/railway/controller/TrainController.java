@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.indian.railway.common.IRConstants.TRAIN_BASE_URL;
+
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/trains")
+@RequestMapping(TRAIN_BASE_URL)
 @RequiredArgsConstructor
 public class TrainController {
 

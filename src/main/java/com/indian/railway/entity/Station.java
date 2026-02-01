@@ -1,10 +1,11 @@
 package com.indian.railway.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(
         name = "stations",

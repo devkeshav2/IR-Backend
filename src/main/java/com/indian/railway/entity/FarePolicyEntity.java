@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
         }
 )
 @Data
-public class FarePolicy {
+public class FarePolicyEntity {
 
     @Id
     @Column(name = "policy_id", length = 13)

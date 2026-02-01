@@ -5,7 +5,6 @@ import com.indian.railway.dto.DropDown;
 import com.indian.railway.entity.Station;
 import com.indian.railway.service.StationService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.indian.railway.common.IRConstants.*;
+import static com.indian.railway.common.APIConstants.*;
+import static com.indian.railway.common.IRResponseConstants.*;
 
 @Slf4j
 @RestController
@@ -22,8 +22,11 @@ import static com.indian.railway.common.IRConstants.*;
 @PreAuthorize("hasRole('ADMIN')")
 public class StationController {
 
-    @Autowired
-    private StationService stationService;
+   private final StationService stationService;
+
+    public StationController(StationService stationService) {
+        this.stationService = stationService;
+    }
 
     @PostMapping
     public ResponseEntity<GenericResponse<Station>> createStation(@RequestBody Station station) {
@@ -101,7 +104,7 @@ public class StationController {
         List<Station> stations = stationService.getAllStations();
 
         GenericResponse<List<Station>> response = new GenericResponse<>();
-        response.setMessage(STATION_FETCHED_SUCCESSFULLY);
+        response.setMessage(STATIONS_FETCHED_SUCCESSFULLY);
         response.setResult(stations);
         response.setCount(stations.size());
         response.setStatus(HttpStatus.OK.value());
@@ -173,7 +176,7 @@ public class StationController {
         List<DropDown> stations = stationService.getAllStationsInDropDown(stationCodeOrName);
 
         GenericResponse<List<DropDown>> response = new GenericResponse<>();
-        response.setMessage(STATION_FETCHED_SUCCESSFULLY);
+        response.setMessage(STATIONS_FETCHED_SUCCESSFULLY);
         response.setResult(stations);
         response.setCount(stations.size());
         response.setStatus(HttpStatus.OK.value());

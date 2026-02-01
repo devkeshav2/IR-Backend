@@ -28,11 +28,11 @@ public class Train {
 
     @ManyToOne
     @JoinColumn(name = "operator_id", nullable = false)
-    private Operator operator;
+    private OperatorEntity operator;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private TrainCategory category;
+    private TrainCategoryEntity category;
 
     @ManyToOne
     @JoinColumn(name = "source_station_id")

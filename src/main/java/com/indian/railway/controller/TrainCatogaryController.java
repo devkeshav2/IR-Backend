@@ -1,7 +1,7 @@
 package com.indian.railway.controller;
 
 import com.indian.railway.common.GenericResponse;
-import com.indian.railway.entity.TrainCategory;
+import com.indian.railway.entity.TrainCategoryEntity;
 import com.indian.railway.service.TrainCategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.indian.railway.common.IRConstants.*;
+import static com.indian.railway.common.APIConstants.TRAINCATEGORY_BASE_URL;
+import static com.indian.railway.common.IRResponseConstants.*;
 
 @Slf4j
 @RestController
@@ -24,11 +25,11 @@ public class TrainCatogaryController {
     private TrainCategoryService trainCategoryService;
 
     @PostMapping
-    public ResponseEntity<GenericResponse<TrainCategory>> createTrainCategory(@RequestBody TrainCategory TrainCategory) {
+    public ResponseEntity<GenericResponse<TrainCategoryEntity>> createTrainCategory(@RequestBody TrainCategoryEntity TrainCategory) {
         log.info("Create TrainCategory request: {}", TrainCategory);
-        TrainCategory saved = trainCategoryService.createTrainCategory(TrainCategory);
+        TrainCategoryEntity saved = trainCategoryService.createTrainCategory(TrainCategory);
 
-        GenericResponse<TrainCategory> response = new GenericResponse<>();
+        GenericResponse<TrainCategoryEntity> response = new GenericResponse<>();
         response.setMessage(TRAINCATEGORY_CREATED_SUCCESSFULLY);
         response.setResult(saved);
         response.setCount(1);
@@ -39,11 +40,11 @@ public class TrainCatogaryController {
     }
 
     @GetMapping
-    public ResponseEntity<GenericResponse<List<TrainCategory>>> getAllTrainCategorys() {
+    public ResponseEntity<GenericResponse<List<TrainCategoryEntity>>> getAllTrainCategorys() {
         log.info("Get all TrainCategorys request");
-        List<TrainCategory> TrainCategorys = trainCategoryService.getAllTrainCategories();
+        List<TrainCategoryEntity> TrainCategorys = trainCategoryService.getAllTrainCategories();
 
-        GenericResponse<List<TrainCategory>> response = new GenericResponse<>();
+        GenericResponse<List<TrainCategoryEntity>> response = new GenericResponse<>();
         response.setMessage(TRAINCATEGORY_FETCHED_SUCCESSFULLY);
         response.setResult(TrainCategorys);
         response.setCount(TrainCategorys.size());

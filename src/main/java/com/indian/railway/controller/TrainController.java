@@ -6,12 +6,11 @@ import com.indian.railway.service.TrainService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.indian.railway.common.IRConstants.TRAIN_BASE_URL;
+import static com.indian.railway.common.APIConstants.TRAIN_BASE_URL;
 
 @Slf4j
 @RestController

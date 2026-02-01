@@ -1,6 +1,6 @@
 package com.indian.railway.service.impl;
 
-import com.indian.railway.entity.TrainCategory;
+import com.indian.railway.entity.TrainCategoryEntity;
 import com.indian.railway.repository.TrainCategoryRepository;
 import com.indian.railway.service.TrainCategoryService;
 import lombok.extern.slf4j.Slf4j;
@@ -17,12 +17,12 @@ public class TrainCategoryServiceImpl implements TrainCategoryService {
     private TrainCategoryRepository trainCategoryRepository;
 
     @Override
-    public TrainCategory createTrainCategory(TrainCategory trainCategory) {
+    public TrainCategoryEntity createTrainCategory(TrainCategoryEntity trainCategory) {
         return trainCategoryRepository.save(trainCategory);
     }
 
     @Override
-    public List<TrainCategory> getAllTrainCategories() {
+    public List<TrainCategoryEntity> getAllTrainCategories() {
         return trainCategoryRepository.findAll();
     }
 }

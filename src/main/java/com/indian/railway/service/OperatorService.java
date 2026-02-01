@@ -1,16 +1,16 @@
 package com.indian.railway.service;
 
 import com.indian.railway.dto.DropDown;
-import com.indian.railway.entity.Operator;
+import com.indian.railway.entity.OperatorEntity;
 
 import java.util.List;
 
 public interface OperatorService {
-    Operator createOperator(Operator operator);
+    OperatorEntity createOperator(OperatorEntity operator);
 
-    List<Operator> getAllOperators();
+    List<OperatorEntity> getAllOperators();
 
-    List<Operator> searchOperatorByName(String name);
+    List<OperatorEntity> searchOperatorByName(String name);
 
     List<DropDown> getAllStationsInDropDown(String stationCodeOrName);
 }

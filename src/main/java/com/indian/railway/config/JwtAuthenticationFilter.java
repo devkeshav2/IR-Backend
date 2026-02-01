@@ -1,11 +1,14 @@
 package com.indian.railway.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.indian.railway.common.GenericResponse;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -38,7 +41,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 Claims claims = jwtUtil.extractAllClaims(token);
 
                 String username = claims.getSubject();
-                String role = claims.get("role", String.class); // 🔥 FIX HERE
+                String role = claims.get("role", String.class);
 
                 if (role != null) {
 
@@ -51,6 +54,18 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 }
+            }else{
+                GenericResponse<String> responseBody = new GenericResponse<>(
+                        "Session expired or invalid token",
+                        null,
+                        0,
+                        HttpStatus.UNAUTHORIZED.value()
+                );
+
+                response.setStatus(HttpStatus.UNAUTHORIZED.value());
+                response.setContentType("application/json");
+                new ObjectMapper().writeValue(response.getOutputStream(), responseBody);
+                return;
             }
         }
 

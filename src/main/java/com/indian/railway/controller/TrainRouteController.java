@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.indian.railway.common.APIConstants.TRAIN_ROUTE_BASE_URL;
+
 @RestController
-@RequestMapping("/api/v1/train-route")
+@RequestMapping(TRAIN_ROUTE_BASE_URL)
 @RequiredArgsConstructor
 public class TrainRouteController {
 

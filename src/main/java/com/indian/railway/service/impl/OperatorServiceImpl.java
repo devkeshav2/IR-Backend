@@ -1,7 +1,7 @@
 package com.indian.railway.service.impl;
 
 import com.indian.railway.dto.DropDown;
-import com.indian.railway.entity.Operator;
+import com.indian.railway.entity.OperatorEntity;
 import com.indian.railway.repository.OperatorRepository;
 import com.indian.railway.service.OperatorService;
 import jakarta.annotation.Resource;
@@ -19,17 +19,17 @@ public class OperatorServiceImpl implements OperatorService {
 
 
     @Override
-    public Operator createOperator(Operator operator) {
+    public OperatorEntity createOperator(OperatorEntity operator) {
         return operatorRepository.save(operator);
     }
 
     @Override
-    public List<Operator> getAllOperators() {
+    public List<OperatorEntity> getAllOperators() {
         return operatorRepository.findAll();
     }
 
     @Override
-    public List<Operator> searchOperatorByName(String name) {
+    public List<OperatorEntity> searchOperatorByName(String name) {
         return operatorRepository.findAllByOperatorName(name);
     }
 

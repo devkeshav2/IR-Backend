@@ -22,7 +22,7 @@ public class FareRule {
 
     @ManyToOne
     @JoinColumn(name = "policy_id", nullable = false)
-    private FarePolicy farePolicy;
+    private FarePolicyEntity farePolicy;
 
     @Column(name = "travel_class", length = 10, nullable = false)
     private String travelClass; // SL, 3A, 2A, CC

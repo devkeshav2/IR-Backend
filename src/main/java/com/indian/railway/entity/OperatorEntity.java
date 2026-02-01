@@ -12,7 +12,7 @@ import lombok.Data;
         }
 )
 @Data
-public class Operator {
+public class OperatorEntity {
 
     @Id
     @Column(name = "operator_id", length = 13)

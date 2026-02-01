@@ -12,7 +12,7 @@ import lombok.Data;
         }
 )
 @Data
-public class TrainCategory {
+public class TrainCategoryEntity {
 
     @Id
     @Column(name = "category_id", length = 13)
